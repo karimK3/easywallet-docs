@@ -1,41 +1,45 @@
-# Website
+# 🦄 EasyWallet Docs
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+[![Built with Docusaurus](https://img.shields.io/badge/built%20with-Docusaurus-2ea44f.svg)](https://docusaurus.io/)
+[![View Documentation](https://img.shields.io/badge/View%20Docs-Online-blue)](https://easywallet.dev/docs)
 
-## Installation
+Documentation officielle pour EasyWallet — Web3 Authentication, Token Gating, NFTs, et plus encore.
 
-```bash
-yarn
-```
-
-## Local Development
+## 🚀 Quick Start
 
 ```bash
-yarn start
+# Clone the repo
+git clone https://github.com/karimK3/easywallet-docs.git
+cd easywallet-docs
+
+# Install dependencies
+npm install
+
+# Start local development server
+npm start
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+👉 Accédez à la documentation locale sur [http://localhost:3000](http://localhost:3000).
 
-## Build
+## 📚 Contenu
 
-```bash
-yarn build
-```
+- Guide de démarrage rapide (Quickstart)
+- SDK JavaScript
+- React Hooks
+- Server SDK (OAuth, JWT)
+- Intégration Dashboard
+- FAQ
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+## 🛠️ Technologies
 
-## Deployment
+- [Docusaurus 3.x](https://docusaurus.io/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [MDX](https://mdxjs.com/)
 
-Using SSH:
+## 📝 License
 
-```bash
-USE_SSH=true yarn deploy
-```
+Distribué sous la licence MIT. Voir [LICENSE](LICENSE) pour plus d'informations.
 
-Not using SSH:
+---
 
-```bash
-GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+Made with ❤️ by the EasyWallet Team.
