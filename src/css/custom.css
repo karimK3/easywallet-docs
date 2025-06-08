@@ -1,0 +1,141 @@
+:root {
+  --ifm-font-family-base: 'Roboto', sans-serif;
+  --ifm-color-primary: #7c3aed; /* Violet EasyWallet */
+  --ifm-color-primary-dark: #6b21a8;
+  --ifm-color-primary-light: #c084fc;
+  --ifm-color-content: #d4d4d8; /* Texte plus lisible */
+}
+
+/* Global page background gradient */
+html, body {
+  background: linear-gradient(160deg, #0a0a23 0%, #111132 50%, #0a0a23 100%) fixed;
+  min-height: 100%;
+  font-family: 'Roboto', sans-serif;
+  color: #d4d4d8;
+}
+
+/* Remove background of docusaurus wrapper */
+#__docusaurus {
+  background: transparent;
+}
+
+/* Hero Section */
+.hero {
+  padding: 6rem 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, #0a0a23 0%, #111132 100%);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #fafafa;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #d4d4d8;
+}
+
+.hero .buttons {
+  margin-top: 2rem;
+}
+
+.hero .button {
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  background: linear-gradient(to right, #7c3aed, #4f46e5);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s ease;
+}
+
+.hero .button:hover {
+  transform: scale(1.05);
+}
+
+/* Gradient Blurred Circle Background */
+.background-gradient {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1200px;
+  height: 1200px;
+  background: radial-gradient(circle at center, rgba(124, 58, 237, 0.3), rgba(79, 70, 229, 0.2), transparent);
+  filter: blur(200px);
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Navbar */
+.navbar {
+  background-color: transparent !important;
+  box-shadow: none;
+}
+
+.navbar__title {
+  font-weight: bold;
+  color: white;
+}
+
+/* Sidebar */
+.menu {
+  background-color: transparent;
+}
+
+.menu__link {
+  color: #d4d4d8;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.menu__link:hover {
+  background-color: rgba(124, 58, 237, 0.1); /* Hover background */
+  color: #c084fc;
+  border-radius: 8px;
+}
+
+.menu__link--active {
+  font-weight: 600;
+  color: #c084fc;
+}
+
+/* SVG Carets — Restore */
+.menu__caret svg {
+  width: 12px;
+  height: 12px;
+  fill: #d4d4d8;
+  transition: transform 0.2s ease, fill 0.2s ease;
+}
+
+/* Rotate on expanded */
+.menu__list-item--expanded > .menu__link > .menu__caret svg {
+  transform: rotate(90deg);
+  fill: #c084fc;
+}
+
+/* Hover caret color */
+.menu__link:hover > .menu__caret svg {
+  fill: #c084fc;
+}
+
+/* Footer */
+.footer {
+  background: transparent;
+  color: #d4d4d8;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer__link-item {
+  color: #c084fc;
+}
+
+/* General text (content) */
+.markdown {
+  color: #d4d4d8;
+}
