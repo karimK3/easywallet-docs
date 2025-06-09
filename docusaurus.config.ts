@@ -1,4 +1,4 @@
-import { themes as prismThemes } from 'prism-react-renderer';
+import hotVibrantTheme from './src/theme/vscodeTheme';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
@@ -14,8 +14,8 @@ const config: Config = {
   url: 'https://easywallet.dev',
   baseUrl: '/',
 
-  organizationName: 'KarimK3', // ton GitHub user
-  projectName: 'easywallet-docs', // le nom de ton repo pour la doc
+  organizationName: 'KarimK3',
+  projectName: 'easywallet-docs',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -33,7 +33,7 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           editUrl: 'https://github.com/KarimK3/easywallet-docs/tree/main/docs/',
         },
-        blog: false, // pas de blog pour l’instant
+        blog: false,
         theme: {
           customCss: [
             require.resolve('./src/css/custom.css'),
@@ -50,7 +50,7 @@ const config: Config = {
       title: 'EasyWallet',
       logo: {
         alt: 'EasyWallet Logo',
-        src: 'img/logo.png', // <== Ton logo ici
+        src: 'img/logo.png',
       },
       items: [
         {
@@ -93,8 +93,8 @@ const config: Config = {
       copyright: `Copyright © ${new Date().getFullYear()} EasyWallet. Built with Docusaurus.`,
     },
     prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+      theme: hotVibrantTheme,
+      darkTheme: hotVibrantTheme,
     },
   } satisfies Preset.ThemeConfig,
 };

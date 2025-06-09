@@ -1,12 +1,11 @@
 :root {
   --ifm-font-family-base: 'Roboto', sans-serif;
-  --ifm-color-primary: #7c3aed; /* Violet EasyWallet */
+  --ifm-color-primary: #c084fc;
   --ifm-color-primary-dark: #6b21a8;
   --ifm-color-primary-light: #c084fc;
-  --ifm-color-content: #d4d4d8; /* Texte plus lisible */
+  --ifm-color-content: #d4d4d8;
 }
 
-/* Global page background gradient */
 html, body {
   background: linear-gradient(160deg, #0a0a23 0%, #111132 50%, #0a0a23 100%) fixed;
   min-height: 100%;
@@ -14,28 +13,27 @@ html, body {
   color: #d4d4d8;
 }
 
-/* Remove background of docusaurus wrapper */
 #__docusaurus {
   background: transparent;
 }
 
-/* Hero Section */
+/* Hero */
 .hero {
-  padding: 6rem 2rem;
+  padding: 8rem 2rem;
   text-align: center;
   background: linear-gradient(135deg, #0a0a23 0%, #111132 100%);
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 800;
   color: #fafafa;
   margin-bottom: 1rem;
 }
 
 .hero p {
-  font-size: 1.25rem;
-  font-weight: 300;
+  font-size: 1.5rem;
+  font-weight: 400;
   color: #d4d4d8;
 }
 
@@ -44,38 +42,51 @@ html, body {
 }
 
 .hero .button {
-  font-size: 1rem;
-  padding: 1rem 2rem;
-  border-radius: 9999px;
+  font-size: 1.2rem;
+  padding: 1rem 2.5rem;
+  border-radius: 12px;
   background: linear-gradient(to right, #7c3aed, #4f46e5);
   color: white;
   text-decoration: none;
   font-weight: 600;
-  transition: transform 0.2s ease;
+  transition: all 0.3s ease;
 }
 
 .hero .button:hover {
   transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(124, 58, 237, 0.4);
 }
 
-/* Gradient Blurred Circle Background */
-.background-gradient {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 1200px;
-  height: 1200px;
-  background: radial-gradient(circle at center, rgba(124, 58, 237, 0.3), rgba(79, 70, 229, 0.2), transparent);
-  filter: blur(200px);
-  opacity: 0.6;
-  pointer-events: none;
-  z-index: 0;
+/* Inline code */
+code {
+  background-color: #1f1f2f;
+  color: #c084fc;
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 90%;
+}
+
+/* Footer */
+.footer {
+  background: #0a0a23;
+  padding: 2rem 0;
+  color: #9ca3af;
+  border-top: none;
+}
+
+.footer__link-item {
+  color: #c084fc;
+}
+
+/* Prism Code blocks */
+.theme-code-block {
+  background-color: #1f1f2f;
+  border-radius: 10px;
 }
 
 /* Navbar */
 .navbar {
-  background-color: transparent !important;
+  background-color: #0a0a23 !important;
   box-shadow: none;
 }
 
@@ -95,7 +106,7 @@ html, body {
 }
 
 .menu__link:hover {
-  background-color: rgba(124, 58, 237, 0.1); /* Hover background */
+  background-color: rgba(124, 58, 237, 0.1);
   color: #c084fc;
   border-radius: 8px;
 }
@@ -105,37 +116,214 @@ html, body {
   color: #c084fc;
 }
 
-/* SVG Carets — Restore */
-.menu__caret svg {
-  width: 12px;
-  height: 12px;
-  fill: #d4d4d8;
-  transition: transform 0.2s ease, fill 0.2s ease;
+.theme-doc-sidebar-container {
+  border-right: 1.0px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Rotate on expanded */
-.menu__list-item--expanded > .menu__link > .menu__caret svg {
-  transform: rotate(90deg);
-  fill: #c084fc;
+
+.pagination-nav {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
 }
 
-/* Hover caret color */
-.menu__link:hover > .menu__caret svg {
-  fill: #c084fc;
-}
-
-/* Footer */
-.footer {
+/* Style des boutons Next/Previous */
+.pagination-nav__link {
+  padding: 0.8rem 1.8rem;
+  border: 1px solid transparent;
   background: transparent;
-  color: #d4d4d8;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 12px;
+  background-clip: padding-box;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
 }
 
-.footer__link-item {
+/* Bordure gradient */
+.pagination-nav__link::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px; /* Bordure 1px */
+  border-radius: 10px;
+  background: linear-gradient(90deg, #8B5CF6, #6366F1); /* Violet -> Indigo */
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+          mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Hover effect */
+.pagination-nav__link:hover {
+  background: linear-gradient(90deg, #8B5CF6, #6366F1); /* Violet -> Indigo */
+  color: #ffffff;
+  transform: scale(1.03);
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.4);
+}
+
+/* Text small info ("Next", "Previous") */
+.pagination-nav__label {
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+/* Titre de lien */
+.pagination-nav__title {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.hero-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem; /* espace entre licorne et texte */
+}
+
+.hero-unicorn {
+  width: 60px;
+  height: 60px;
+  transform: translateY(-14px);
+}
+
+/* Optionnel pour que le titre soit bien aligné verticalement */
+.hero__title {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 800;
+  color: #fafafa;
+}
+
+
+
+/* 1. Réduire taille des titres */
+h1 {
+  font-size: 2.25rem; /* Avant 3rem, réduit légèrement */
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.2rem; /* Pour sous-titres */
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* 2. Ajouter padding-left pour tout le contenu */
+.theme-doc-markdown {
+  padding-left: 1rem; /* Un petit 16px */
+}
+
+/* 3. Améliorer lisibilité du texte */
+.markdown p {
+  margin-bottom: 1.5rem; /* espacement entre paragraphes */
+  line-height: 1.8; /* un bon line-height aéré */
+}
+
+/* 6. Petits réglages extra */
+.docItemContainer {
+  padding: 1.5rem 2rem; /* Un padding agréable autour du contenu */
+}
+
+/* ALIGNER footer "Edit this page" + pagination au contenu */
+.theme-doc-footer {
+  padding-left: 1rem; /* Même padding que ton contenu markdown */
+  padding-right: 1rem;
+}
+/* 8. Previous/Next Buttons alignés */
+
+.pagination-nav {
+  margin-top: 1rem; /* réduit l’espace entre Edit et Previous/Next */
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* 1. Ajuste et aligne l'icône Home */
+.breadcrumbs__item--home .breadcrumbs__link svg {
+  vertical-align: middle;
+  margin-bottom: 2px;
+  width: 18px;
+  height: 18px;
+  fill: #423e46; /* Couleur violette pour l'icône */
+  transition: fill 0.3s ease;
+}
+
+/* 2. Style général des liens dans le breadcrumb */
+.breadcrumbs__link {
+  color: #d4d4d8;
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* 3. Hover violet */
+.breadcrumbs__link:hover {
   color: #c084fc;
 }
 
-/* General text (content) */
+/* 4. Séparateur > entre les éléments */
+.breadcrumbs__item:not(:last-child)::after {
+  color: #946bb6; /* Indigo plus sombre */
+  content: '›'; /* Change le séparateur */
+  margin: 0 0.5rem;
+  font-weight: bold;
+  opacity: 0.7;
+}
+
+
+/* 5. Active breadcrumb (le dernier) */
+.breadcrumbs__item--active .breadcrumbs__link {
+  color: #c084fc;
+  font-weight: 700;
+  cursor: default;
+}
+/* On cible directement l'élément 'Home' du breadcrumb */
+.breadcrumbs__item--home {
+  display: flex;
+  align-items: center;
+}
+
+/* SVG Icon */
+.breadcrumbs__item--home .breadcrumbs__link svg {
+  width: 18px;
+  height: 18px;
+  fill: #c084fc;
+  transform: translateY(2px); /* <- on ajuste finement */
+}
+
+/* lien Home */
+.breadcrumbs__item--home .breadcrumbs__link {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* espace entre l'icone et le texte */
+}
+
+/* Ajuste globalement le breadcrumb container */
+.breadcrumbs {
+  padding-left: 0.3rem; /* aligne avec ton markdown */
+}
+/* Padding interne dans les blocs de code */
+.theme-code-block {
+  background-color: #1f1f2f;
+  border-radius: 10px;
+  padding: 1.5rem; /* Ajouté */
+  overflow-x: auto;
+}
+
+/* Padding horizontal entre le bord et le code */
+.codeBlockLines {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .markdown {
-  color: #d4d4d8;
+  font-size: 0.90rem; /* texte de base */
+  line-height: 1.8;
 }
