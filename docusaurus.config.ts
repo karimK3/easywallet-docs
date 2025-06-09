@@ -11,7 +11,7 @@ const config: Config = {
     v4: true,
   },
 
-  url: 'https://easywallet.dev',
+  url: 'https://docs.easywallet.dev',
   baseUrl: '/',
 
   organizationName: 'KarimK3',
